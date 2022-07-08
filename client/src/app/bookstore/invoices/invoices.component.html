@@ -1,0 +1,12 @@
+<div class="entity-content" *ngFor="let invoice of invoices; let i = index">
+  <h2>Invoice {{ i + 1 }}</h2>
+  <ul>
+    <li class="entityID"><i class="fas fa-edit"></i><b> ID:</b> <span #invoiceId>{{ invoice._id}}</span></li>
+    <li><i class="fas fa-edit"></i><b> Number:</b> <span id="entity-title">{{ invoice.number }}</span></li>
+    <li><i class="fas fa-edit"></i><b> Date</b>: <span id="entity-writer">{{ invoice.date }}</span></li>
+    <li><i class="fas fa-edit"></i><b> Total price</b>: <span id="entity-publish_date">{{ invoice.total_price }}</span></li>
+  </ul>
+  <div class="buttons">
+    <button id="delete-btn" (click)="deleteInvoice(invoiceId)">Delete</button>
+  </div>
+</div>

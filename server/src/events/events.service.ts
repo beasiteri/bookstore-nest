@@ -1,0 +1,17 @@
+import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Event } from './entities/event.entity';
+
+@Injectable()
+export class EventsService {
+  constructor(
+    @InjectRepository(Event)
+    private eventRepository: Repository<Event>,
+  ) {}
+
+  async getAllEvents(): Promise<Event[]> {
+    console.log('events');
+    return await this.eventRepository.find();
+  }
+}
