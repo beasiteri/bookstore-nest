@@ -10,10 +10,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { EventsComponent } from './events/events.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { BookstoreComponent } from './bookstore/bookstore.component';
-import { BooksComponent } from './bookstore/books/books.component';
-import { CustomersComponent } from './bookstore/customers/customers.component';
-import { InvoicesComponent } from './bookstore/invoices/invoices.component';
+import { CustomersComponent } from './customers/customers.component';
+import { InvoicesComponent } from './invoices/invoices.component';
+import { BooksComponent } from './books/books.component';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -26,10 +25,9 @@ FullCalendarModule.registerPlugins([
     HeaderComponent,
     EventsComponent,
     PageNotFoundComponent,
-    BookstoreComponent,
-    BooksComponent,
     CustomersComponent,
-    InvoicesComponent
+    InvoicesComponent,
+    BooksComponent,
   ],
   imports: [
     BrowserModule,

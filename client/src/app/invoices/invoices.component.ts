@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { InvoicesService } from '../../services/invoices.service';
+import { InvoicesService } from '../services/invoices.service';
 
 @Component({
   selector: 'app-invoices',

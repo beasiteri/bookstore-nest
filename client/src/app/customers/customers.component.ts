@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { CustomersService } from '../../services/customers.service';
+import { CustomersService } from '../services/customers.service';
 
 @Component({
   selector: 'app-customers',
@@ -27,3 +27,4 @@ export class CustomersComponent implements OnInit {
     });
   }
 }
+

@@ -74,14 +74,16 @@ button.btn:focus {
   width: unset;
 }
 
-.books-container {
+.books-container,
+.customers-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.books-content {
+.books-content,
+.customers-content{
   border: 1px solid #e1e1e1;
   padding: 20px;
   width: 100%;
@@ -91,7 +93,8 @@ button.btn:focus {
   margin-bottom: 30px;
 }
 
-.books-content .book-id {
+.books-content .book-id,
+.customers-content .customer-id {
   display: none;
 }
 
@@ -113,9 +116,21 @@ button.btn:focus {
   margin-right: 20px;
 }
 
+.customers-content .customer-image img {
+  width: 128px;
+  height: 128px;
+  margin-right: 20px;
+}
+
 .books-content .book-image img {
   width: 145px;
   height: 225px;
+  object-fit: cover;
+}
+
+.customers-content .customer-image img {
+  width: 128px;
+  height: 128px;
   object-fit: cover;
 }
 
@@ -128,7 +143,17 @@ button.btn:focus {
   font-weight: bold;
 }
 
-/* CALENDAR */
+.customer-content p {
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-content p span {
+  color: #333e4e;
+  font-size: 14px;
+}
+
+/* ------------------------ CALENDAR ------------------------- */
 
 .container.calendar {
   max-width: 100%;

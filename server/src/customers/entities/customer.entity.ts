@@ -9,6 +9,7 @@ export const CustomerSchema = new mongoose.Schema({
   address: { type: String, required: true },
   postal_code: { type: String, required: true },
   city: { type: String, required: true },
+  image: { type: String, required: true },
 });
 
 export class Customer {
@@ -28,4 +29,6 @@ export class Customer {
   postal_code: string;
   @ApiProperty()
   city: string;
+  @ApiProperty()
+  image: string;
 }

@@ -36,4 +36,9 @@ export class CustomerDto {
     type: 'string',
   })
   city: string;
+  @ApiProperty({
+    description: 'Customer image',
+    type: 'string',
+  })
+  image: string;
 }

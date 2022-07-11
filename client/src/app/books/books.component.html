@@ -1,0 +1,17 @@
+<main class="container">      
+  <h2>Book collection from our amazing library</h2>
+  <div class="books-container">
+    <a href="/books/{{ book._id }}" class="books-content" *ngFor="let book of books; let i = index">
+      <div class="book-image">
+        <img src="/assets/images/books/{{ book.image }}" alt="{{ book.alt }}">
+      </div>
+      <div class="book-content">
+        <p class="book-id">{{ book._id }}</p>
+        <h3 class="book-title">{{ book.title }}</h3>
+        <p class="book-writer">{{ book.writer }}</p>
+        <p class="book-stock">In stock: {{ book.stock }}</p>
+        <p class="book-price">USD ${{ book.price }}</p>
+      </div>
+    </a>
+  </div>
+</main>
