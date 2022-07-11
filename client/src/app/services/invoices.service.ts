@@ -9,10 +9,10 @@ export class InvoicesService {
   constructor(private httpClient: HttpClient) { }
 
   getAllInvoices() {
-    return this.httpClient.get('/invoices');
+    return this.httpClient.get('http://localhost:5000/invoices');
   }
 
   deleteInvoice(id) {
-    return this.httpClient.delete(`/invoices/${id}`);
+    return this.httpClient.delete(`http://localhost:5000/invoices/${id}`);
   }
 }

@@ -8,10 +8,10 @@ export class CustomersService {
   constructor(private httpClient: HttpClient) { }
 
   getAllCustomers() {
-    return this.httpClient.get('/customers');
+    return this.httpClient.get('http://localhost:5000/customers');
   }
 
   deleteCustomer(id) {
-    return this.httpClient.delete(`/customers/${id}`);
+    return this.httpClient.delete(`http://localhost:5000/customers/${id}`);
   }
 }
