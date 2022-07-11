@@ -1,12 +1,12 @@
-<div class="entity-content" *ngFor="let book of books; let i = index">
-  <h2>Book {{ i + 1 }}</h2>
-  <ul>
-    <li class="entityID"><i class="fas fa-edit"></i><b> ID:</b> <span #bookId>{{ book._id}}</span></li>
-    <li><i class="fas fa-edit"></i><b> Title:</b> <span id="entity-title">{{ book.title }}</span></li>
-    <li><i class="fas fa-edit"></i><b> Writer</b>: <span id="entity-writer">{{ book.writer }}</span></li>
-    <li><i class="fas fa-edit"></i><b> Publish Date</b>: <span id="entity-publish_date">{{ book.publish_date }}</span></li>
-  </ul>
-  <div class="buttons">
-    <button id="delete-btn" (click)="deleteBook(bookId)">Delete</button>
+<a href="/books/{{ book._id }}" class="books-content" *ngFor="let book of books; let i = index">
+  <div class="book-image">
+    <img src="/assets/images/{{ book.image }}" alt="{{ book.alt }}">
   </div>
-</div>
+  <div class="book-content">
+    <p class="book-id">{{ book._id }}</p>
+    <h3 class="book-title">{{ book.title }}</h3>
+    <p class="book-writer">{{ book.writer }}</p>
+    <p class="book-stock">In stock: {{ book.stock }}</p>
+    <p class="book-price">USD ${{ book.price }}</p>
+  </div>
+</a>

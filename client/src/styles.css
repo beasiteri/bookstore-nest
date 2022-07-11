@@ -9,10 +9,7 @@ body {
 }
 
 .container {
-  border: 1px solid #e1e1e1;
-  padding: 40px 20px;
   width: 100%;
-  max-width: 520px;
   margin: 40px auto 0;
   height: 100%;
 }
@@ -22,7 +19,7 @@ body {
 }
 
 p {
-  color: #b3b3b3;
+  color: #000;
   font-weight: 300; 
 }
 
@@ -31,7 +28,10 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
 }
 
 a {
@@ -70,99 +70,62 @@ button.btn:focus {
   color: #fff;
 }
 
-/* ACCORDION */
-
-.accordion {
-  margin-bottom: 40px;
+.page-not-found button {
+  width: unset;
 }
 
-.accordion-button {
-  margin-bottom: 0;
+.books-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.accordion-button:not(.collapsed) {
-  color: #3a5e91;
-}
-
-.entries-dropdown .dropdown-toggle {
-  background-color: #333e4e;
-  color: #fff;
-  border: none;
-  margin-bottom: 0;
-}
-
-.entries-dropdown .dropdown-toggle:hover {
-  background-color: #333e4e;
-}
-
-.entries-dropdown .dropdown-toggle:focus {
-  box-shadow: none;
-  background-color: #333e4e;
-}
-
-.entries-dropdown .dropdown-menu.show {
-  width: 100%;
-  box-shadow: 0px 1px 5px 0px lightgrey;
-}
-
-#entries-container .entity-content .fa-edit {
-  cursor: pointer;
-}
-
-#entries-container .entity-content {
-  padding: 10px;
-  margin-top: 15px;
+.books-content {
   border: 1px solid #e1e1e1;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin-bottom: 30px;
 }
 
-#entries-container .entity-content div ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-#entries-container .entity-content .buttons {
-  display: flex;
-  align-self: start;
-  font-size: 13px;
-  border-radius: 5px;
-}
-
-#entries-container .entity-content button {
-  border: none;
-  color: #fff;
-  background-color: #3794c1;
-  border-radius: 5px;
-  margin-left: 10px;
-  padding: 2px 15px;
-  font-size: 14px;
-}
-
-#entries-container .entity-content #delete-btn,
-#entries-container .entity-content #edit-btn {
-  background-color: #e75d5d;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  padding: 4px 15px;
-  width: 70px;
-}
-
-#entries-container .entity-content #edit-btn {
-  background-color: #3887cb;
-  margin-right: 5px;
-}
-
-#entries-container .entityID {
+.books-content .book-id {
   display: none;
 }
 
+.books-content .book-title {
+  text-transform: capitalize;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 20px;
+}
 
-.form-control:active, .form-control:focus {
-  outline: none;
-  -webkit-box-shadow: none;
-  box-shadow: none; 
+.books-content .book-writer {
+  color: #4d4d4d;
+}
+
+.books-content .book-image {
+  width: 145px;
+  height: 225px;
+  margin-right: 20px;
+}
+
+.books-content .book-image img {
+  width: 145px;
+  height: 225px;
+  object-fit: cover;
+}
+
+.books-content .book-stock {
+  margin-bottom: 0;
+}
+
+.books-content .book-price {
+  color: #ff0072;
+  font-weight: bold;
 }
 
 /* CALENDAR */
@@ -302,3 +265,4 @@ button.btn:focus {
 .fc .fc-daygrid-day.fc-day-today {
   background-color: #40e0d0 !important;
 }
+

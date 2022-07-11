@@ -7,6 +7,11 @@ export class BookDto {
   })
   title: string;
   @ApiProperty({
+    description: 'Book image',
+    type: 'string',
+  })
+  image: string;
+  @ApiProperty({
     description: 'Book writer',
     type: 'string',
   })

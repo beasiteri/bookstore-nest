@@ -3,6 +3,7 @@ import * as mongoose from 'mongoose';
 
 export const BookSchema = new mongoose.Schema({
   title: { type: String, required: true },
+  image: { type: String, required: true },
   writer: { type: String, required: true },
   publish_date: { type: String, required: true },
 });
@@ -12,6 +13,8 @@ export class Book {
   id: string;
   @ApiProperty()
   title: string;
+  @ApiProperty()
+  image: string;
   @ApiProperty()
   writer: string;
   @ApiProperty()
