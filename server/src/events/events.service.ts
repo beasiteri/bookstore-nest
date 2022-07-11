@@ -11,7 +11,6 @@ export class EventsService {
   ) {}
 
   async getAllEvents(): Promise<Event[]> {
-    console.log('events');
     return await this.eventRepository.find();
   }
 }

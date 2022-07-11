@@ -30,7 +30,6 @@ export class BookstoreComponent {
       result.nativeElement.value;
       bookBody.push(result.nativeElement.id);
     });
-    console.log(bookBody);
     this.service.createBook(bookBody);
   }
 }

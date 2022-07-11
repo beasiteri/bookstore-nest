@@ -64,7 +64,6 @@ export class BooksController {
   ) {
     try {
       const bookById = await this.booksService.updateBook(id, bookDto);
-      console.log(bookById);
       return response.status(HttpStatus.OK).json({
         bookById,
       });

@@ -9,7 +9,6 @@ export class EventsController {
   async getAllEvents(@Res() response) {
     try {
       const eventsData = await this.eventsService.getAllEvents();
-      console.log(eventsData);
       return response.status(HttpStatus.OK).json({
         eventsData,
       });
