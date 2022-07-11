@@ -21,7 +21,7 @@ import { Event } from './events/entities/event.entity';
       database: 'library',
       entities: [Event],
       synchronize: true,
-      dropSchema: true,
+      dropSchema: false,
     }),
     BooksModule,
     CustomersModule,

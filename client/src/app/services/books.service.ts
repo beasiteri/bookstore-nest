@@ -8,18 +8,14 @@ export class BooksService {
   constructor(private httpClient: HttpClient) { }
 
   getAllBooks() {
-    return this.httpClient.get('http://localhost:5000/books');
+    return this.httpClient.get('/books');
   }
 
-  createBook(bookBody) {
-    return this.httpClient.post(`http://localhost:5000/books`, {
-      title: bookBody.title,
-      writer: bookBody.writer,
-      publish_date: bookBody.publish_date
-    });
+  createBook(bookData) {
+    return this.httpClient.post(`/books`, bookData);
   }
 
   deleteBook(id) {
-    return this.httpClient.delete(`http://localhost:5000/books/${id}`);
+    return this.httpClient.delete(`/books/${id}`);
   }
 }
