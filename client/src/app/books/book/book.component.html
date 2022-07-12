@@ -1,0 +1,18 @@
+<main class="container book">      
+  <div class="book-container">
+    <div class="book-content">
+      <div class="book-image">
+        <img src="/assets/images/books/{{ book.image }}" alt="{{ book.alt }}">
+      </div>
+      <div class="book-text">
+        <p class="book-id">{{ book._id }}</p>
+        <h3 class="book-title">{{ book.title }}</h3>
+        <p class="book-writer">{{ book.writer }}</p>
+        <p class="book-publish-date"><span>Publication date: </span>{{ book.publish_date }}</p>
+        <p class="book-stock"><span>In stock: </span>{{ book.stock }}</p>
+        <p class="book-price">USD ${{ book.price }}</p>
+        <p class="book-description"><span>Description</span>{{ book.description }}</p>
+      </div>
+    </div>
+  </div>
+</main>

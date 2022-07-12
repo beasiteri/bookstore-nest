@@ -1,12 +1,12 @@
 <main class="container">      
   <h2>Invoices</h2>
   <div class="invoices-container">
-    <a href="/invoices/{{ invoice._id }}" class="invoices-content" *ngFor="let invoice of invoices; let i = index">
-      <div class="invoice-content">
+    <a href="/invoices/{{ invoice._id }}" class="invoice-content" *ngFor="let invoice of invoices; let i = index">
+      <div class="invoice-text">
         <p class="invoice-id"><span>Invoice ID: </span>{{ invoice._id }}</p>
         <p class="invoice-number"><span>Invoice Number: </span>{{ invoice.number }}</p>
         <p class="invoice-date"><span>Invoice Date: </span>{{ invoice.date }}</p>
-        <p class="invoice-total-price"><span>Total Price: </span>{{ invoice.total_price }}</p>
+        <p class="invoice-total-price"><span>Total Price: </span>USD ${{ invoice.total_price }}</p>
       </div>
     </a>
   </div>

@@ -1,11 +1,11 @@
 <main class="container">      
   <h2>Customers</h2>
   <div class="customers-container">
-    <a href="#" class="customers-content" *ngFor="let customer of customers; let i = index">
+    <a href="/customers/{{ customer._id }}" class="customer-content" *ngFor="let customer of customers; let i = index">
       <div class="customer-image">
         <img src="/assets/images/customers/{{ customer.image }}" alt="{{ customer.alt }}">
       </div>
-      <div class="customer-content">
+      <div class="customer-text">
         <p class="customer-id">{{ customer._id}}</p>
         <p class="customer-firstname"><span>First Name</span>{{ customer.first_name }}</p>
         <p class="customer-lastname"><span>Last Name</span>{{ customer.last_name }}</p>

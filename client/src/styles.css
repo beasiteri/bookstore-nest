@@ -20,7 +20,7 @@ body {
 }
 
 p {
-  color: #000;
+  color: #333;
   font-weight: 300; 
 }
 
@@ -33,6 +33,7 @@ h2 {
   text-align: center;
   font-weight: bold;
   margin-bottom: 50px;
+  color: #333;
 }
 
 a {
@@ -121,7 +122,7 @@ button.btn:focus {
 
 .book-text .book-id,
 .customer-text .customer-id,
-.invice-text .invoice-id {
+.invoice-text .invoice-id {
   display: none;
 }
 
@@ -196,10 +197,17 @@ button.btn:focus {
   font-size: 18px;
 }
 
-.customer-text .customer-image {
+.customer-content .customer-image {
   width: 128px;
   height: 128px;
-  margin-right: 20px;
+  margin-right: 40px;
+  padding: 20px;
+}
+
+.customer-text {
+  width: 100%;
+  padding: 20px;
+  border-left: 1px solid #e1e1e1;
 }
 
 .customer-text .customer-image img {
@@ -221,11 +229,6 @@ button.btn:focus {
 .invoice-text span {
   font-weight: bold;
 }
-
-
-
-
-
 
 /* ------------------------ CALENDAR ------------------------- */
 
