@@ -175,11 +175,25 @@ button.btn:focus {
 
 .book {
   background-color: #fff;
-  padding: 100px 40px;
+  padding: 10px 40px;
 }
 
 .book .book-container {
   display: flex;
+  flex-direction: column;
+}
+
+.book button {
+  display: flex;
+  margin-bottom: 30px;
+  width: fit-content;
+  align-self: end;
+  border: none;
+  background-color: #2e6fb1;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 .book .book-container .book-image img {
