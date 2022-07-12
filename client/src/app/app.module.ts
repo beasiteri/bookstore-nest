@@ -13,6 +13,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { CustomersComponent } from './customers/customers.component';
 import { InvoicesComponent } from './invoices/invoices.component';
 import { BooksComponent } from './books/books.component';
+import { BookComponent } from './books/book/book.component';
+import { CustomerComponent } from './customers/customer/customer.component';
+import { InvoiceComponent } from './invoices/invoice/invoice.component';
 
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
@@ -28,6 +31,9 @@ FullCalendarModule.registerPlugins([
     CustomersComponent,
     InvoicesComponent,
     BooksComponent,
+    BookComponent,
+    CustomerComponent,
+    InvoiceComponent,
   ],
   imports: [
     BrowserModule,
