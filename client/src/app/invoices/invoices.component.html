@@ -1,12 +1,14 @@
-<div class="entity-content" *ngFor="let invoice of invoices; let i = index">
-  <h2>Invoice {{ i + 1 }}</h2>
-  <ul>
-    <li class="entityID"><i class="fas fa-edit"></i><b> ID:</b> <span #invoiceId>{{ invoice._id}}</span></li>
-    <li><i class="fas fa-edit"></i><b> Number:</b> <span id="entity-title">{{ invoice.number }}</span></li>
-    <li><i class="fas fa-edit"></i><b> Date</b>: <span id="entity-writer">{{ invoice.date }}</span></li>
-    <li><i class="fas fa-edit"></i><b> Total price</b>: <span id="entity-publish_date">{{ invoice.total_price }}</span></li>
-  </ul>
-  <div class="buttons">
-    <button id="delete-btn" (click)="deleteInvoice(invoiceId)">Delete</button>
+<main class="container">      
+  <h2>Invoices</h2>
+  <div class="invoices-container">
+    <a href="/invoices/{{ invoice._id }}" class="invoices-content" *ngFor="let invoice of invoices; let i = index">
+      <div class="invoice-content">
+        <p class="invoice-id"><span>Invoice ID: </span>{{ invoice._id }}</p>
+        <p class="invoice-number"><span>Invoice Number: </span>{{ invoice.number }}</p>
+        <p class="invoice-date"><span>Invoice Date: </span>{{ invoice.date }}</p>
+        <p class="invoice-total-price"><span>Total Price: </span>{{ invoice.total_price }}</p>
+      </div>
+    </a>
   </div>
-</div>
+</main>
+

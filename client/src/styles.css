@@ -75,7 +75,8 @@ button.btn:focus {
 }
 
 .books-container,
-.customers-container {
+.customers-container,
+.invoices-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -83,7 +84,7 @@ button.btn:focus {
 }
 
 .books-content,
-.customers-content{
+.customers-content {
   border: 1px solid #e1e1e1;
   padding: 20px;
   width: 100%;
@@ -93,8 +94,19 @@ button.btn:focus {
   margin-bottom: 30px;
 }
 
+.invoices-content {
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
 .books-content .book-id,
-.customers-content .customer-id {
+.customers-content .customer-id,
+.invices-content .invoice-id {
   display: none;
 }
 
@@ -151,6 +163,10 @@ button.btn:focus {
 .customer-content p span {
   color: #333e4e;
   font-size: 14px;
+}
+
+.invoice-content span {
+  font-weight: bold;
 }
 
 /* ------------------------ CALENDAR ------------------------- */
