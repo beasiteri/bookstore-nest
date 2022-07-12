@@ -11,6 +11,10 @@ export class BooksService {
     return this.httpClient.get('http://localhost:5000/books');
   }
 
+  getBookById(id) {
+    return this.httpClient.get(`http://localhost:5000/books/${id}`);
+  }
+
   createBook(bookData) {
     return this.httpClient.post(`http://localhost:5000/books`, bookData);
   }

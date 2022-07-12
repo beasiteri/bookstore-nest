@@ -29,14 +29,7 @@ export class BooksComponent {
     });
   }
 
-  setEntity(event) {
-    if (event.target.id === 'books') this.entity = 'books'; 
-    else if (event.target.id === 'customers') this.entity = 'customers';
-    else if (event.target.id === 'invoices') this.entity = 'invoices';
-    else this.entity = 'none';
-  }
-
-  addBook(event) {
+  createBook(event) {
     event.preventDefault();
     /* const bookBody = this.bookInfoReference.map((result) => {
       return result.nativeElement.value;

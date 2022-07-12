@@ -2,6 +2,7 @@ body {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin: 0;
   padding: 0;
+  background-color: rgb(243, 243, 243);
 }
 
 * {
@@ -83,19 +84,20 @@ button.btn:focus {
   flex-wrap: wrap;
 }
 
-.books-content,
-.customers-content {
+.book-content,
+.customer-content {
   border: 1px solid #e1e1e1;
-  padding: 20px;
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   display: flex;
   flex-direction: row;
   margin-bottom: 30px;
+  background-color: #fff;
 }
 
-.invoices-content {
+.invoice-content {
   border: 1px solid #e1e1e1;
+  background-color: #fff;
   padding: 20px;
   width: 100%;
   max-width: 1200px;
@@ -104,70 +106,126 @@ button.btn:focus {
   margin-bottom: 30px;
 }
 
-.books-content .book-id,
-.customers-content .customer-id,
-.invices-content .invoice-id {
+.book .book-content {
+  border: none;
+}
+
+.book-text {
+  padding: 20px;
+  width: 100%;
+}
+
+.book .book-text {
+  padding: 0 20px;
+}
+
+.book-text .book-id,
+.customer-text .customer-id,
+.invice-text .invoice-id {
   display: none;
 }
 
-.books-content .book-title {
+.book-text .book-title {
   text-transform: capitalize;
   color: #333;
   font-weight: bold;
   margin-bottom: 0;
-  font-size: 20px;
+  font-size: 20px;  
 }
 
-.books-content .book-writer {
-  color: #4d4d4d;
+.book-text .book-writer {
+  font-style: italic;
+  border-bottom: 1px solid #e1e1e1;
 }
 
-.books-content .book-image {
-  width: 145px;
-  height: 225px;
-  margin-right: 20px;
-}
-
-.customers-content .customer-image img {
-  width: 128px;
-  height: 128px;
-  margin-right: 20px;
-}
-
-.books-content .book-image img {
-  width: 145px;
-  height: 225px;
-  object-fit: cover;
-}
-
-.customers-content .customer-image img {
-  width: 128px;
-  height: 128px;
-  object-fit: cover;
-}
-
-.books-content .book-stock {
+.book-text .book-publish-date,
+.book-text .book-stock {
+  font-size: 14px;
   margin-bottom: 0;
 }
 
-.books-content .book-price {
-  color: #ff0072;
+.book .book-text .book-stock {
+  margin-bottom: 25px;
+}
+
+.book-text .book-publish-date span,
+.book-text .book-stock span {
   font-weight: bold;
 }
 
-.customer-content p {
+.book-text .book-image {
+  width: 145px;
+  height: 225px;
+  margin-right: 20px;
+}
+
+.book-text .book-image img {
+  width: 145px;
+  height: 225px;
+  object-fit: cover;
+}
+
+.book-text .book-price {
+  color: #ff0072;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.book {
+  background-color: #fff;
+  padding: 100px 40px;
+}
+
+.book .book-container {
+  display: flex;
+}
+
+.book .book-container .book-image img {
+  width: 200px;
+  margin-right: 25px;
+}
+
+.book-text .book-description {
   display: flex;
   flex-direction: column;
 }
 
-.customer-content p span {
+.book-text .book-description span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.customer-text .customer-image {
+  width: 128px;
+  height: 128px;
+  margin-right: 20px;
+}
+
+.customer-text .customer-image img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+}
+
+.customer-text p {
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-text p span {
   color: #333e4e;
   font-size: 14px;
 }
 
-.invoice-content span {
+.invoice-text span {
   font-weight: bold;
 }
+
+
+
+
+
 
 /* ------------------------ CALENDAR ------------------------- */
 
