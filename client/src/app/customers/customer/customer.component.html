@@ -1,1 +1,23 @@
-<p>customer works!</p>
+<main class="container customer">      
+  <div class="customer-container">
+    <div class="entity-buttons">
+      <button class="edit">Edit</button>
+      <button class="delete">Delete</button>
+    </div>
+    <div class="customer-content">  
+      <div class="customer-image">
+        <img src="/assets/images/customers/{{ customer.image }}" alt="{{ customer.alt }}">
+      </div>
+      <div class="customer-text">
+        <p class="customer-id">{{ customer._id }}</p>
+        <p class="customer-firstname"><span>First Name</span>{{ customer.first_name }}</p>
+        <p class="customer-lastname"><span>Last Name</span>{{ customer.last_name }}</p>
+        <p class="customer-email"><span>Email</span>{{ customer.email }}</p>
+        <p class="customer-phone"><span>Phone</span>{{ customer.phone }}</p>
+        <p class="customer-address"><span>Address</span>{{ customer.address }}</p>
+        <p class="customer-postalcode"><span>Postal Code</span>{{ customer.postal_code }}</p>
+        <p class="customer-city"><span>City</span>{{ customer.city }}</p>
+      </div>
+    </div>
+  </div>
+</main>

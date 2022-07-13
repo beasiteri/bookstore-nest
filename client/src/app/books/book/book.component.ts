@@ -19,7 +19,6 @@ export class BookComponent implements OnInit {
     .subscribe(response => {
       const result = [response];
       this.book = result[0]['bookById'];
-      console.log(this.book);
     });
   }
 }

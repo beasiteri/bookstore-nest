@@ -12,6 +12,10 @@ export class InvoicesService {
     return this.httpClient.get('http://localhost:5000/invoices');
   }
 
+  getInvoiceById(id) {
+    return this.httpClient.get(`http://localhost:5000/invoices/${id}`);
+  }
+
   deleteInvoice(id) {
     return this.httpClient.delete(`http://localhost:5000/invoices/${id}`);
   }

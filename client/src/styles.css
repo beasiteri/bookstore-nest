@@ -15,6 +15,10 @@ body {
   height: 100%;
 }
 
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 .navbar-brand {
   font-size: 24px;
 }
@@ -86,7 +90,8 @@ button.btn:focus {
 }
 
 .book-content,
-.customer-content {
+.customer-content,
+.invoice-content {
   border: 1px solid #e1e1e1;
   width: 100%;
   max-width: 600px;
@@ -107,7 +112,15 @@ button.btn:focus {
   margin-bottom: 30px;
 }
 
-.book .book-content {
+.book,
+.customer,
+.invoice {
+  border: 1px solid #e1e1e1;
+}
+
+.book .book-content,
+.customer .customer-content,
+.invoice .invoice-content {
   border: none;
 }
 
@@ -173,17 +186,30 @@ button.btn:focus {
   letter-spacing: 2px;
 }
 
-.book {
+.book,
+.customer,
+.invoice {
   background-color: #fff;
   padding: 10px 40px;
 }
 
-.book .book-container {
+.book .book-container,
+.customer .customer-container,
+.invoice .invoice-container {
   display: flex;
   flex-direction: column;
 }
 
-.book button {
+.book .entity-buttons,
+.customer .entity-buttons,
+.invoice .entity-buttons {
+  display: flex;
+  justify-content: end;
+}
+
+.book .entity-buttons button,
+.customer .entity-buttons button,
+.invoice .entity-buttons button {
   display: flex;
   margin-bottom: 30px;
   width: fit-content;
@@ -194,6 +220,13 @@ button.btn:focus {
   padding: 5px 20px;
   border-radius: 5px;
   margin-top: 20px;
+  margin-left: 15px;
+}
+
+.book .entity-buttons button.delete,
+.customer .entity-buttons button.delete,
+.invoice .entity-buttons button.delete {
+  background-color: #ce234d;
 }
 
 .book .book-container .book-image img {
@@ -221,7 +254,6 @@ button.btn:focus {
 .customer-text {
   width: 100%;
   padding: 20px;
-  border-left: 1px solid #e1e1e1;
 }
 
 .customer-text .customer-image img {
@@ -236,8 +268,9 @@ button.btn:focus {
 }
 
 .customer-text p span {
-  color: #333e4e;
+  color: #ff0072;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .invoice-text span {

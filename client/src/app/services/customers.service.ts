@@ -11,6 +11,10 @@ export class CustomersService {
     return this.httpClient.get('http://localhost:5000/customers');
   }
 
+  getCustomerById(id) {
+    return this.httpClient.get(`http://localhost:5000/customers/${id}`);
+  }
+
   deleteCustomer(id) {
     return this.httpClient.delete(`http://localhost:5000/customers/${id}`);
   }

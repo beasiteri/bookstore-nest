@@ -1,1 +1,19 @@
-<p>invoice works!</p>
+<main class="container invoice">      
+  <div class="invoice-container">
+    <div class="entity-buttons">
+      <button class="edit">Edit</button>
+      <button class="delete">Delete</button>
+    </div>
+    <div class="invoice-content">  
+      <div class="invoice-image">
+        <img src="/assets/images/invoices/{{ invoice.image }}" alt="{{ invoice.alt }}">
+      </div>
+      <div class="invoice-text">
+        <p class="invoice-id">{{ invoice._id }}</p>
+        <p class="invoice-number"><span>Invoice Number:</span>{{ invoice.number }}</p>
+        <p class="invoice-date"><span>Invoice Date:</span>{{ invoice.date }}</p>
+        <p class="invoice-total-price"><span>Total Price: </span>{{ invoice.total_price }}</p>
+      </div>
+    </div>
+  </div>
+</main>
