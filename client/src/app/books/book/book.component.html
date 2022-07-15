@@ -1,8 +1,10 @@
 <main class="container book">      
   <div class="book-container">
     <div class="entity-buttons">
-      <button class="edit">Edit</button>
-      <button class="delete">Delete</button>
+      <button class="edit" (click)="editBookEntity()">Edit</button>
+      <button class="save" *ngIf="editMode" (click)="saveBookEntity()">Save</button>
+      <button class="cancel" *ngIf="editMode" (click)="cancelBookEntity()">Cancel</button>
+      <button class="delete" *ngIf="!editMode" (click)="deleteBookEntity()">Delete</button>
     </div>
     <div class="book-content">  
       <div class="book-image">
@@ -10,12 +12,30 @@
       </div>
       <div class="book-text">
         <p class="book-id">{{ book._id }}</p>
-        <h3 class="book-title">{{ book.title }}</h3>
-        <p class="book-writer">{{ book.writer }}</p>
-        <p class="book-publish-date"><span>Publication date: </span>{{ book.publish_date }}</p>
-        <p class="book-stock"><span>In stock: </span>{{ book.stock }}</p>
-        <p class="book-price">USD ${{ book.price }}</p>
-        <p class="book-description"><span>Description</span>{{ book.description }}</p>
+        <h3 class="book-title" *ngIf="!editMode">{{ book.title }}</h3>
+        <input type="text" *ngIf="editMode" class="book-title" value="{{ book.title }}">
+        <p class="book-writer" *ngIf="!editMode">{{ book.writer }}</p>
+        <input type="text" *ngIf="editMode" class="book-writer" value="{{ book.writer }}">
+        <p class="book-publish-date" *ngIf="!editMode"><span>Publication date: </span>{{ book.publish_date }}</p>
+        <div class="book-publish-date-input" *ngIf="editMode">
+          <label for="publish-date">Publication date:</label>
+          <input type="text" id="publish-date" value="{{ book.publish_date }}">
+        </div>
+        <p class="book-stock" *ngIf="!editMode"><span>In stock: </span>{{ book.stock }}</p>
+        <div class="book-stock-input" *ngIf="editMode">
+          <label for="stock">In stock:</label>
+          <input type="text" id="stock" value="{{ book.stock }}">
+        </div>
+        <p class="book-price" *ngIf="!editMode">USD $<span>{{ book.price }}</span></p>
+        <div class="book-price-input" *ngIf="editMode">
+          <label class="book-price" for="price">USD $</label>
+          <input class="book-price" type="text" id="price" value="{{ book.price }}">
+        </div>
+        <p class="book-description" *ngIf="!editMode"><span>Description</span>{{ book.description }}</p>
+        <div class="book-description-input" *ngIf="editMode">
+          <p class="book-description"><span>Description</span></p>
+          <textarea class="book-description" id="description">{{ book.description }}</textarea>
+        </div>
       </div>
     </div>
   </div>

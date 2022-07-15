@@ -129,6 +129,11 @@ button.btn:focus {
   width: 100%;
 }
 
+::-webkit-input-placeholder {color: #333;} /* Chrome/Opera/Safari */
+::-moz-placeholder { color: #333;} /* Firefox 19+ */
+:-ms-input-placeholder { color: #333;} /* IE 10+ */
+:-moz-placeholder {color: #333;}  /* Firefox 18- */
+
 .book .book-text {
   padding: 0 20px;
 }
@@ -144,27 +149,65 @@ button.btn:focus {
   color: #333;
   font-weight: bold;
   margin-bottom: 0;
-  font-size: 20px;  
+  font-size: 20px; 
+}
+
+.book .book-text h3.book-title {
+  border: 1px solid transparent;
+  padding: 5px 3px;
 }
 
 .book-text .book-writer {
   font-style: italic;
-  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+
+.book .book-text .book-writer {
+  margin-bottom: 0;
+}
+
+.book .book-text p.book-writer {
+  border: 1px solid transparent;
+  padding: 2px 3px;
+}
+
+.book-text .book-publish-date {
+  border-top: 1px solid #e1e1e1;
+  padding-top: 20px;
+}
+
+.book-text .book-publish-date-input {
+  padding-top: 18px;
 }
 
 .book-text .book-publish-date,
+.book-text .book-publish-date-input,
+.book-text .book-stock-input label,
 .book-text .book-stock {
   font-size: 14px;
   margin-bottom: 0;
 }
 
+.book-text .book-stock-input input {
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
 .book .book-text .book-stock {
+  margin-top: 6px;
   margin-bottom: 25px;
 }
 
 .book-text .book-publish-date span,
+.book-text .book-publish-date-input label,
+.book-text .book-stock-input label,
 .book-text .book-stock span {
   font-weight: bold;
+}
+
+.book-text .book-publish-date-input,
+.book-text .book-price-input  {
+  white-space: nowrap;
 }
 
 .book-text .book-image {
@@ -184,6 +227,29 @@ button.btn:focus {
   font-weight: bold;
   font-size: 20px;
   letter-spacing: 2px;
+}
+
+.book .book-text .book-price span {
+  padding-left: 6px;
+}
+
+.book-text .book-price-input {
+  margin-bottom: 13px;
+}
+
+.book-text .book-price-input input {
+  margin-left: 2px;
+  margin-top: -3px;
+}
+
+.book-text label.book-price {
+  float: left;
+}
+
+.book-text span.book-price {
+  display: block;
+  overflow: hidden;
+  padding: 0 4px 0 6px
 }
 
 .book,
@@ -223,6 +289,18 @@ button.btn:focus {
   margin-left: 15px;
 }
 
+.book .entity-buttons button.save,
+.customer .entity-buttons button.save,
+.invoice .entity-buttons button.save {
+  background-color: #6ca351;
+}
+
+.book .entity-buttons button.cancel,
+.customer .entity-buttons button.cancel,
+.invoice .entity-buttons button.cancel {
+  background-color: #ce234d;
+}
+
 .book .entity-buttons button.delete,
 .customer .entity-buttons button.delete,
 .invoice .entity-buttons button.delete {
@@ -234,7 +312,7 @@ button.btn:focus {
   margin-right: 25px;
 }
 
-.book-text .book-description {
+.book-text .book-description span {
   display: flex;
   flex-direction: column;
 }
@@ -242,6 +320,12 @@ button.btn:focus {
 .book-text .book-description span {
   font-weight: bold;
   font-size: 18px;
+}
+
+.book-text .book-description-input textarea {
+  margin-top: -18px;
+  width: 100%;
+  resize: none;
 }
 
 .customer-content .customer-image {
